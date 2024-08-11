@@ -1,8 +1,41 @@
-{% extends "index.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ellie Morgan Hair</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+CU&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Great+Vibes&family=Playwrite+CU&family=Rubik+Mono+One&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
 
-{% block content %}
+    <!--  Navbar -->
+<nav class="navbar navbar-expand" >
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('home') }}">Ellie Morgan Hair</a>
+        <!-- Remove the button and collapse div for non-responsive behavior -->
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 <div class="container my-5">
-    <h2 class="title-font mb-4">Contact Me </h2>
+    <h2 class="title-font mb-4">Contact Me</h2>
     {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
             <div class="alert alert-success" role="alert">
@@ -12,7 +45,7 @@
     {% endwith %}
     <div class="row">
         <!-- Form Section -->
-        <div class="col-md-6">
+        <div class="col-md-12 col-lg-6 mb-4 mb-lg-0">
             <form method="POST" action="{{ url_for('contact') }}">
                 <div class="mb-3">
                     <label for="name" class="form-label">Name</label>
@@ -30,8 +63,8 @@
             </form>
         </div>
 
-         <!-- Google Maps Section -->
-         <div class="col-md-6">
+        <!-- Google Maps Section -->
+        <div class="col-md-12 col-lg-6">
             <div class="map-container">
                 <div class="map">
                     <iframe
@@ -43,4 +76,33 @@
         </div>
     </div>
 </div>
-{% endblock %}
+    <!-- Footer Section -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    
+                
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Follow Me</h5>
+                    <a href="https://www.facebook.com/profile.php?id=100063554762088" class="social-icons me-3">
+                        <i class="bi bi-facebook"></i> <!-- Bootstrap icon -->
+                    </a>
+                    <a href="https://www.instagram.com/elliemorganhair/" class="social-icons">
+                        <i class="bi bi-instagram"></i> <!-- Bootstrap icon -->
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p class="mb-0">&copy; 2024 Ellie Morgan Hair, developed by Chanel Morgan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+</html>

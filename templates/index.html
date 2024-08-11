@@ -22,22 +22,18 @@
 </head>
 <body>
 
-    <!-- Responsive Navbar -->
-    <nav class="navbar navbar-expand-lg" >
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{{ url_for('home') }}">Ellie Morgan Hair</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Non-Responsive Navbar -->
+<nav class="navbar navbar-expand" >
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('home') }}">Ellie Morgan Hair</a>
+        <!-- Remove the button and collapse div for non-responsive behavior -->
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
   
       
 {% block content %}
@@ -50,35 +46,84 @@
             <div class="col-md-8">
                 <h2 class="title-font">About me </h2>
                 <p>
-                    This is a brief description about the owner. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Nullam euismod, nisi vel consectetur interdum, nisl nisi cursus risus, a condimentum nisi nibh et nisl. 
-                    Donec vel libero at lectus rutrum vestibulum vitae ut turpis.
-                </p>
+                    Hi, my name is Ellie Morgan. I am a Level 2 qualified hairdresser and have been an HBA finalist for the past two years. Although I am passionate about all 
+                    hairdressing styles, my favorite is working with blondes.
             </div>
         </div>
     </div>
 
-   <!-- Price List Section -->
+ <!-- Price List Section -->
 <div class="price-container my-5">
     <h2 class="title-font text-center">Price List</h2>
     <div class="row justify-content-center">
         <div class="col-md-6">
+            <p class="section-title">Colouring services include cut, blow dry, and toner</p>
             <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Hair Cut 
-                    <span class="badge price-badge">$50</span>
+                    Full Head Colour 
+                    <span class="badge price-badge">£70.50</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Roots Only
+                    <span class="badge price-badge">£64.50</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Balayage Refresh
+                    <span class="badge price-badge">£61-75</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Balayage with Roots
+                    <span class="badge price-badge">£105-115</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Full Head Highlights
+                    <span class="badge price-badge">£95-105</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Premier Full Head Highlights
+                    <span class="badge price-badge">£105-115</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Toner
+                    <span class="badge price-badge">£10</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="col-md-6">
+            <p class="section-title">Express Colour Services</p>
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Face Frame Refresh
+                    <span class="badge price-badge">£51-65</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    15 Foil Balayage
+                    <span class="badge price-badge">£51-65</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Toner Refresh
+                    <span class="badge price-badge">£65-50</span>
+                </li>
+            </ul>
+
+            <p class="section-title">Finishing services</p>
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Cut & Blow dry
+                    <span class="badge price-badge">£30</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Restyle
+                    <span class="badge price-badge">£37</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     Blow Dry
-                    <span class="badge price-badge">$100</span>
+                    <span class="badge price-badge">£16</span>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Service 3
-                    <span class="badge price-badge">$150</span>
-                </li>
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Service 4
-                    <span class="badge price-badge">$200</span>
+                    Curly Blow Dry
+                    <span class="badge price-badge">£20</span>
                 </li>
             </ul>
         </div>

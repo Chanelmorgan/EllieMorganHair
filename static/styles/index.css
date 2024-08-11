@@ -1,5 +1,20 @@
-body{
-    color:#283367;
+/* General Body Styling */
+body {
+    color: #283367;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #fff4ef;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #2F3C7E;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-brand {
@@ -8,132 +23,179 @@ body{
     font-style: normal;
     font-size: 24px;
     color: #ffe5d9;
-} 
-.navbar-brand:hover {
-    color: #e6d0c5;  
 }
-.navbar{ 
-    background-color: #2F3C7E;
+
+.navbar-brand:hover {
+    color: #e6d0c5;
 }
 
 .nav-item {
-
-    margin: 0; /* Ensure no extra margin around the item */
+    margin: 0;
 }
 
 .nav-link {
-    display: inline-block; /* Make it behave like a block for styling */
-    padding: 10px 20px; /* Adjust padding for rectangle appearance */
-    background-color: #ffe5d9; /* Nude background color */
-    color: #000; /* Text color */
-    border-radius: 5px; /* Slightly rounded corners */
-    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffe5d9;
+    color: #000;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
 .nav-link:hover {
-    background-color: #e6d0c5; /* Slightly darker nude color on hover */
+    background-color: #e6d0c5;
 }
 
+/* Footer Styling */
 .footer {
     background-color: #2F3C7E;
-    padding: 20px;
     text-align: center;
     color: #e6d0c5;
-} 
-
-.btn-contact { 
-    background-color:#2F3C7E; 
-}
-.btn-contact:hover{
-    background-color:#2F3C7E;
+    margin-top: auto;
+    padding: 10px 0;
+    width: 100%;
 }
 
-/* Container for the map */
+/* Button Styling */
+.btn-contact {
+    background-color: #2F3C7E;
+}
+
+.btn{
+    background-color: #2F3C7E; 
+}
+
+.btn-contact:hover {
+    background-color: #2F3C7E;
+}
+
+/* Google Map Container */
 .map-container {
+    position: relative;
     width: 100%;
-    max-width: 100%; /* Ensure it doesn’t exceed the container’s width */
-}
-
-/* Map styling */
-.map {
-    width: 100%;
-    height: 500px; /* Adjust height to your preference */
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
     overflow: hidden;
 }
 
-.map iframe {
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    border: 0;
-}
-body{
-    background-color: #fff4ef;
 }
 
-.price-container{
-   background-color: #fff4ef;
-}
-/* Style for social media icons */
+/* Social Media Icons */
 .social-icons {
-    font-size: 2rem; /* Adjust the size as needed */
-    color: #e6d0c5; /* Change to the color you prefer */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    font-size: 2rem; /* Large icons */
+    color: #e6d0c5;
+    transition: color 0.3s ease;
 }
 
 .social-icons:hover {
-    color: #fff4ef; /* Change color on hover if desired */
-}
-.list-group{
-    background-color: #fff4ef;
+    color: #fff4ef;
 }
 
-.title-font{
-    font-family: "Sacramento", cursive;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 48px;
-}
- 
-#google-review {
+/* Price List Section */
+.price-container {
     padding: 2rem;
+    background-color: #fff4ef;
     border-radius: 8px;
 }
 
-#google-review .btn-primary {
-    background-color: #2F3C7E; /* Customize button color */
-    border-color: #2F3C7E;
-}
-#google-review .btn-primary:hover {
-    background-color: #0056b3; /* Darker color on hover */
-    border-color: #004085;
-}
-/* Style the container for the price list */
-.price-container {
-    padding: 2rem; /* Add padding around the section */
-    border-radius: 8px; /* Rounded corners */
-}
-
-
-/* Style the list items */
-.list-group-item {
-    background-color: #fff4ef; /* White background for each item */
-    border: 1px solid transparent; /* Light border around each item */
-    border-radius: 8px; /* Rounded corners for each item */
-    margin-bottom: 1rem; /* Space between items */
-    padding: 1rem; /* Padding inside each item */
-    font-size: 24px;
-}
-
-/* Style the price badge */
-.price-badge {
-    background-color: #2F3C7E; /* Yellow background for the price badge */
-    color: #ffe5d9; /* Dark text color for the price */
-    font-size: 1.2rem; /* Larger text size for the price */
-    padding: 0.5rem 1rem; /* Padding inside the badge */
-    border-radius: 12px; /* Rounded corners for the badge */
-}
-
-/* Align list items to the left */
 .list-group {
-    text-align: left; /* Align text to the left */
+    background-color: #fff4ef;
+}
+
+.list-group-item {
+    background-color: #fff4ef;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-badge {
+    background-color: #2F3C7E;
+    color: #ffe5d9;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 12px;
+    margin-left: 10px;
+}
+
+.price-container .section-title {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 20px; /* Slightly smaller for mobile */
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+        padding: 8px 15px;
+        font-size: 14px; /* Adjust link size for mobile */
+    }
+
+    .footer {
+        padding: 15px 0; /* Slightly more padding for mobile */
+        font-size: 14px;
+    }
+
+    .social-icons {
+        font-size: 1.5rem; /* Smaller icons for mobile */
+    }
+
+    .price-container {
+        padding: 1rem; /* Reduce padding for mobile */
+    }
+
+    .price-badge {
+        font-size: 0.8rem; /* Smaller badge for mobile */
+        padding: 0.2rem 0.5rem;
+    }
+
+    .section-title {
+        text-align: left;
+        font-size: 0.9rem; /* Adjusted size for mobile */
+    }
+
+    .map-container {
+        padding-bottom: 75%; /* Adjusted aspect ratio for mobile */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .navbar-brand {
+        font-size: 22px; /* Slightly larger on tablet */
+    }
+
+    .nav-link {
+        padding: 10px 18px; /* Adjust padding for tablets */
+        font-size: 16px;
+    }
+
+    .price-container {
+        padding: 1.5rem; /* Adjust padding for tablets */
+    }
+
+    .section-title {
+        font-size: 1rem; /* Adjusted size for tablets */
+    }
 }
