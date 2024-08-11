@@ -3,14 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Ellie Morgan Hair</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playwrite+CU&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Great+Vibes&family=Playwrite+CU&family=Rubik+Mono+One&family=Sacramento&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div>
-        <h1>Home Page</h1>
-        <p>This can have the about us, price list, and little gallery and reviews </p>
+
+    <!-- Responsive Navbar -->
+    <nav class="navbar navbar-expand-lg" >
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('home') }}">Ellie Morgan Hair</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+      
+{% block content %}
+    <!-- About Section -->
+    <div class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-4 text-center">
+                <img src="{{ url_for('static', filename='images/ellie.jpg') }}"  alt="Owner Photo" class="img-fluid rounded-circle">
+            </div>
+            <div class="col-md-8">
+                <h2 class="title-font">About me </h2>
+                <p>
+                    This is a brief description about the owner. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Nullam euismod, nisi vel consectetur interdum, nisl nisi cursus risus, a condimentum nisi nibh et nisl. 
+                    Donec vel libero at lectus rutrum vestibulum vitae ut turpis.
+                </p>
+            </div>
+        </div>
     </div>
-    
+
+   <!-- Price List Section -->
+<div class="price-container my-5">
+    <h2 class="title-font text-center">Price List</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Hair Cut 
+                    <span class="badge price-badge">$50</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Blow Dry
+                    <span class="badge price-badge">$100</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Service 3
+                    <span class="badge price-badge">$150</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Service 4
+                    <span class="badge price-badge">$200</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Gallery Section -->
+    <div class="container my-5">
+      
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <img src="{{ url_for('static', filename='images/banner.jpg') }}" alt="Gallery Image 1" class="img-fluid rounded">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="{{ url_for('static', filename='images/banner2.jpg') }}" alt="Gallery Image 2" class="img-fluid rounded">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="{{ url_for('static', filename='images/banner3.jpg') }}" alt="Gallery Image 3" class="img-fluid rounded">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <img src="{{ url_for('static', filename='images/hair3.jpg') }}" alt="Gallery Image 4" class="img-fluid rounded">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="{{ url_for('static', filename='images/hair4.jpg') }}" alt="Gallery Image 5" class="img-fluid rounded">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="{{ url_for('static', filename='images/hair5.jpg') }}" alt="Gallery Image 6" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+
+    <!-- Google Review Section -->
+<section id="google-review" class="container my-5">
+    <h2 class="title-font text-center mb-4">Leave Me a Google Review</h2>
+    <div class="text-center">
+        <p>Your feedback is important to me! Please leave a review on our Google Business Profile.</p>
+        <a href="YOUR_GOOGLE_REVIEW_LINK" target="_blank" class="btn btn-primary">Leave a Review</a>
+    </div>
+</section>
+
+    {% endblock %}
+
+    <!-- Footer Section -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    
+                
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5>Follow Me</h5>
+                    <a href="https://www.facebook.com/profile.php?id=100063554762088" class="social-icons me-3">
+                        <i class="bi bi-facebook"></i> <!-- Bootstrap icon -->
+                    </a>
+                    <a href="https://www.instagram.com/elliemorganhair/" class="social-icons">
+                        <i class="bi bi-instagram"></i> <!-- Bootstrap icon -->
+                    </a>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p class="mb-0">&copy; 2024 Ellie Morgan Hair, developed by Chanel Morgan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </body>
-<script type="text/javascript" src="{{ url_for('static', filename='index.js')}}"></script>
 </html>

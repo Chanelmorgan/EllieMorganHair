@@ -1,11 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
-</head>
-<body>
-    
-</body>
-</html>
+{% extends "index.html" %}
+
+{% block content %}
+<div class="container my-5">
+    <h2 class="title-font mb-4">Contact Me </h2>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="alert alert-success" role="alert">
+                {{ messages[0][1] }}
+            </div>
+        {% endif %}
+    {% endwith %}
+    <div class="row">
+        <!-- Form Section -->
+        <div class="col-md-6">
+            <form method="POST" action="{{ url_for('contact') }}">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-contact btn btn-primary w-100">Send Message</button>
+            </form>
+        </div>
+
+         <!-- Google Maps Section -->
+         <div class="col-md-6">
+            <div class="map-container">
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1211.4335977891087!2d1.7234205327367071!3d52.608171313772736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47da0760ea166eed%3A0x456a1885669e3da7!2sHairByAmber!5e0!3m2!1sen!2suk!4v1723371628168!5m2!1sen!2suk"
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

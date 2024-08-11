@@ -1,0 +1,139 @@
+body{
+    color:#283367;
+}
+
+.navbar-brand {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 24px;
+    color: #ffe5d9;
+} 
+.navbar-brand:hover {
+    color: #e6d0c5;  
+}
+.navbar{ 
+    background-color: #2F3C7E;
+}
+
+.nav-item {
+
+    margin: 0; /* Ensure no extra margin around the item */
+}
+
+.nav-link {
+    display: inline-block; /* Make it behave like a block for styling */
+    padding: 10px 20px; /* Adjust padding for rectangle appearance */
+    background-color: #ffe5d9; /* Nude background color */
+    color: #000; /* Text color */
+    border-radius: 5px; /* Slightly rounded corners */
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-link:hover {
+    background-color: #e6d0c5; /* Slightly darker nude color on hover */
+}
+
+.footer {
+    background-color: #2F3C7E;
+    padding: 20px;
+    text-align: center;
+    color: #e6d0c5;
+} 
+
+.btn-contact { 
+    background-color:#2F3C7E; 
+}
+.btn-contact:hover{
+    background-color:#2F3C7E;
+}
+
+/* Container for the map */
+.map-container {
+    width: 100%;
+    max-width: 100%; /* Ensure it doesn’t exceed the container’s width */
+}
+
+/* Map styling */
+.map {
+    width: 100%;
+    height: 500px; /* Adjust height to your preference */
+    overflow: hidden;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+body{
+    background-color: #fff4ef;
+}
+
+.price-container{
+   background-color: #fff4ef;
+}
+/* Style for social media icons */
+.social-icons {
+    font-size: 2rem; /* Adjust the size as needed */
+    color: #e6d0c5; /* Change to the color you prefer */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.social-icons:hover {
+    color: #fff4ef; /* Change color on hover if desired */
+}
+.list-group{
+    background-color: #fff4ef;
+}
+
+.title-font{
+    font-family: "Sacramento", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+}
+ 
+#google-review {
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+#google-review .btn-primary {
+    background-color: #2F3C7E; /* Customize button color */
+    border-color: #2F3C7E;
+}
+#google-review .btn-primary:hover {
+    background-color: #0056b3; /* Darker color on hover */
+    border-color: #004085;
+}
+/* Style the container for the price list */
+.price-container {
+    padding: 2rem; /* Add padding around the section */
+    border-radius: 8px; /* Rounded corners */
+}
+
+
+/* Style the list items */
+.list-group-item {
+    background-color: #fff4ef; /* White background for each item */
+    border: 1px solid transparent; /* Light border around each item */
+    border-radius: 8px; /* Rounded corners for each item */
+    margin-bottom: 1rem; /* Space between items */
+    padding: 1rem; /* Padding inside each item */
+    font-size: 24px;
+}
+
+/* Style the price badge */
+.price-badge {
+    background-color: #2F3C7E; /* Yellow background for the price badge */
+    color: #ffe5d9; /* Dark text color for the price */
+    font-size: 1.2rem; /* Larger text size for the price */
+    padding: 0.5rem 1rem; /* Padding inside the badge */
+    border-radius: 12px; /* Rounded corners for the badge */
+}
+
+/* Align list items to the left */
+.list-group {
+    text-align: left; /* Align text to the left */
+}
