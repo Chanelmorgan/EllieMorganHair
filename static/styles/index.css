@@ -11,7 +11,7 @@ body {
 
 /* Navbar Styling */
 .navbar {
-    background-color: #2F3C7E;
+    background-color: #deaa9b;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -48,7 +48,7 @@ body {
 
 /* Footer Styling */
 .footer {
-    background-color: #2F3C7E;
+    background-color: #deaa9b;
     text-align: center;
     color: #e6d0c5;
     margin-top: auto;
@@ -58,15 +58,22 @@ body {
 
 /* Button Styling */
 .btn-contact {
-    background-color: #2F3C7E;
+    background-color: #deaa9b;
+    border: transparent solid;
 }
 
 .btn{
-    background-color: #2F3C7E; 
+    background-color: #deaa9b; 
+    border: transparent solid;
+}
+.btn:hover{
+    background-color: #f2bfb1; 
+    border: transparent solid;
 }
 
 .btn-contact:hover {
-    background-color: #2F3C7E;
+    background-color: #ffcfc2;
+    border: transparent solid;
 }
 
 /* Google Map Container */
@@ -94,7 +101,7 @@ body {
 }
 
 .social-icons:hover {
-    color: #fff4ef;
+    color: #be9285;
 }
 
 /* Price List Section */
@@ -121,7 +128,7 @@ body {
 }
 
 .price-badge {
-    background-color: #2F3C7E;
+    background-color: #deaa9b;
     color: #ffe5d9;
     font-size: 0.9rem;
     padding: 0.3rem 0.7rem;
